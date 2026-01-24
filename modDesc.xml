@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="80">
+    <title>
+        <en>Tax Mod</en>
+        <de>Steuern-Mod</de>
+        <fr>Mod de Taxes</fr>
+        <es>Mod de Impuestos</es>
+    </title>
+    <description>
+        <en><![CDATA[
+Adds realistic tax system to your farm.
+
+Features:
+• Daily tax deductions
+• Monthly tax returns
+• Three tax rate levels (Low/Medium/High)
+• Configurable tax rates
+• Tax history and statistics
+• Professional notifications
+• Multiplayer compatible
+• Save/Load settings
+• Localized for multiple languages
+
+Experience the challenge of managing farm finances with taxes!
+]]></en>
+        <de><![CDATA[
+Fügt ein realistisches Steuersystem zu Ihrer Farm hinzu.
+
+Funktionen:
+• Tägliche Steuerabzüge
+• Monatliche Steuerrückzahlungen
+• Drei Steuersatzstufen (Niedrig/Mittel/Hoch)
+• Konfigurierbare Steuersätze
+• Steuerverlauf und Statistiken
+• Professionelle Benachrichtigungen
+• Multiplayer-kompatibel
+• Einstellungen speichern/laden
+• Für mehrere Sprachen lokalisiert
+
+Erleben Sie die Herausforderung der Farmfinanzverwaltung mit Steuern!
+]]></de>
+        <fr><![CDATA[
+Ajoute un système de taxes réaliste à votre ferme.
+
+Fonctionnalités :
+• Déductions fiscales quotidiennes
+• Remboursements d'impôts mensuels
+• Trois niveaux de taux d'imposition (Faible/Moyen/Élevé)
+• Taux d'imposition configurables
+• Historique et statistiques des taxes
+• Notifications professionnelles
+• Compatible multijoueur
+• Sauvegarde/chargement des paramètres
+• Localisé pour plusieurs langues
+
+Vivez le défi de la gestion des finances agricoles avec les taxes!
+]]></fr>
+        <es><![CDATA[
+Añade un sistema de impuestos realista a tu granja.
+
+Características:
+• Deducciones fiscales diarias
+• Devoluciones de impuestos mensuales
+• Tres niveles de tasa impositiva (Baja/Media/Alta)
+• Tasas impositivas configurables
+• Historial y estadísticas de impuestos
+• Notificaciones profesionales
+• Compatible con multijugador
+• Guardar/cargar configuración
+• Localizado para varios idiomas
+
+¡Experimenta el desafío de gestionar las finanzas de la granja con impuestos!
+]]></es>
+    </description>
+    
+    <author>
+        <en>TisonK</en>
+    </author>
+    
+    <version>1.1.0.0</version>
+    <multiplayer supported="true"/>
+    
+    <iconFilename>icon_FS22_TaxMod.dds</iconFilename>
+    
+    <l10n>
+        <!-- Tax notifications -->
+        <text name="tax_mod_tax_notification_title">
+            <en>Tax Deduction</en>
+            <nl>Belastingaftrek</nl>
+            <de>Steuerabzug</de>
+            <fr>Déduction fiscale</fr>
+            <es>Deducción fiscal</es>
+        </text>
+        
+        <text name="tax_mod_return_notification_title">
+            <en>Tax Return</en>
+            <nl>Belastingteruggave</nl>
+            <de>Steuerrückzahlung</de>
+            <fr>Remboursement d'impôt</fr>
+            <es>Devolución de impuestos</es>
+        </text>
+        
+        <text name="tax_mod_daily_tax_message">
+            <en>Daily tax deduction: -%s</en>
+            <nl>Dagelijkse belastingaftrek: -%s</nl>
+            <de>Täglicher Steuerabzug: -%s</de>
+            <fr>Déduction fiscale quotidienne : -%s</fr>
+            <es>Deducción fiscal diaria: -%s</es>
+        </text>
+        
+        <text name="tax_mod_monthly_return_message">
+            <en>Monthly tax return: +%s (Total paid this month: %s)</en>
+            <nl>Maandelijkse belastingteruggave: +%s (Totaal betaald deze maand: %s)</nl>
+            <de>Monatliche Steuerrückzahlung: +%s (Dieser Monat insgesamt gezahlt: %s)</de>
+            <fr>Remboursement d'impôt mensuel : +%s (Total payé ce mois : %s)</fr>
+            <es>Devolución mensual de impuestos: +%s (Total pagado este mes: %s)</es>
+        </text>
+        
+        <!-- Welcome messages -->
+        <text name="tax_mod_welcome_message">
+            <en>Tax system activated! You will be taxed daily and receive returns monthly.</en>
+            <nl>Belastingsysteem geactiveerd! Je wordt dagelijks belast en krijgt maandelijks terug.</nl>
+            <de>Steuersystem aktiviert! Sie werden täglich besteuert und erhalten monatliche Rückzahlungen.</de>
+            <fr>Système de taxes activé ! Vous serez taxé quotidiennement et recevrez des remboursements mensuels.</fr>
+            <es>¡Sistema de impuestos activado! Serás gravado diariamente y recibirás devoluciones mensuales.</es>
+        </text>
+        
+        <text name="tax_mod_help_message">
+            <en>To get help, type 'tax' in the console.</en>
+            <nl>Typ 'tax' in de console voor hulp.</nl>
+            <de>Geben Sie „tax" in der Konsole ein, um Hilfe zu erhalten.</de>
+            <fr>Tapez « tax » dans la console pour obtenir de l'aide.</fr>
+            <es>Escribe « tax » en la consola para obtener ayuda.</es>
+        </text>
+        
+        <!-- Settings menu -->
+        <text name="tax_mod_category">
+            <en>Tax Mod</en>
+            <nl>Belasting Mod</nl>
+            <de>Steuern-Mod</de>
+            <fr>Mod de Taxes</fr>
+            <es>Mod de Impuestos</es>
+        </text>
+        
+        <text name="tax_mod_enabled">
+            <en>Enable Tax System</en>
+            <nl>Belastingsysteem inschakelen</nl>
+            <de>Steuersystem aktivieren</de>
+            <fr>Activer le système de taxes</fr>
+            <es>Activar sistema de impuestos</es>
+        </text>
+        
+        <text name="tax_mod_enabled_tooltip">
+            <en>Enable or disable the tax system</en>
+            <nl>Schakel het belastingsysteem in of uit</nl>
+            <de>Steuersystem aktivieren oder deaktivieren</de>
+            <fr>Activer ou désactiver le système de taxes</fr>
+            <es>Activar o desactivar el sistema de impuestos</es>
+        </text>
+        
+        <text name="tax_mod_tax_rate">
+            <en>Tax Rate Level</en>
+            <nl>Belastingtariefniveau</nl>
+            <de>Steuersatzstufe</de>
+            <fr>Niveau de taux d'imposition</fr>
+            <es>Nivel de tasa impositiva</es>
+        </text>
+        
+        <text name="tax_mod_tax_rate_tooltip">
+            <en>Choose the tax rate percentage applied daily</en>
+            <nl>Kies het belastingtariefpercentage dat dagelijks wordt toegepast</nl>
+            <de>Wählen Sie den täglich angewandten Steuersatz in Prozent</de>
+            <fr>Choisissez le pourcentage de taux d'imposition appliqué quotidiennement</fr>
+            <es>Elige el porcentaje de tasa impositiva aplicado diariamente</es>
+        </text>
+        
+        <text name="tax_mod_rate_low">
+            <en>Low (1%)</en>
+            <nl>Laag (1%)</nl>
+            <de>Niedrig (1%)</de>
+            <fr>Faible (1%)</fr>
+            <es>Baja (1%)</es>
+        </text>
+        
+        <text name="tax_mod_rate_medium">
+            <en>Medium (2%)</en>
+            <nl>Gemiddeld (2%)</nl>
+            <de>Mittel (2%)</de>
+            <fr>Moyen (2%)</fr>
+            <es>Media (2%)</es>
+        </text>
+        
+        <text name="tax_mod_rate_high">
+            <en>High (3%)</en>
+            <nl>Hoog (3%)</nl>
+            <de>Hoch (3%)</de>
+            <fr>Élevé (3%)</fr>
+            <es>Alta (3%)</es>
+        </text>
+        
+        <text name="tax_mod_return_percentage">
+            <en>Return Percentage</en>
+            <nl>Teruggavepercentage</nl>
+            <de>Rückzahlungsprozentsatz</de>
+            <fr>Pourcentage de remboursement</fr>
+            <es>Porcentaje de devolución</es>
+        </text>
+        
+        <text name="tax_mod_return_percentage_tooltip">
+            <en>Percentage of taxes returned monthly (0-100%)</en>
+            <nl>Percentage belastingen dat maandelijks wordt teruggegeven (0-100%)</nl>
+            <de>Prozentsatz der monatlich zurückgezahlten Steuern (0-100%)</de>
+            <fr>Pourcentage des taxes remboursées mensuellement (0-100%)</fr>
+            <es>Porcentaje de impuestos devueltos mensualmente (0-100%)</es>
+        </text>
+        
+        <text name="tax_mod_minimum_balance">
+            <en>Minimum Balance</en>
+            <nl>Minimumsaldo</nl>
+            <de>Mindestguthaben</de>
+            <fr>Solde minimum</fr>
+            <es>Saldo mínimo</es>
+        </text>
+        
+        <text name="tax_mod_minimum_balance_tooltip">
+            <en>Minimum farm balance before taxes are applied</en>
+            <nl>Minimum farmsaldo voordat belasting wordt toegepast</nl>
+            <de>Mindestfarmguthaben bevor Steuern angewendet werden</de>
+            <fr>Solde minimum de la ferme avant l'application des taxes</fr>
+            <es>Saldo mínimo de la granja antes de aplicar impuestos</es>
+        </text>
+        
+        <text name="tax_mod_notifications">
+            <en>Show Notifications</en>
+            <nl>Toon meldingen</nl>
+            <de>Benachrichtigungen anzeigen</de>
+            <fr>Afficher les notifications</fr>
+            <es>Mostrar notificaciones</es>
+        </text>
+        
+        <text name="tax_mod_notifications_tooltip">
+            <en>Show notifications for tax deductions and returns</en>
+            <nl>Toon meldingen voor belastingaftrek en teruggaves</nl>
+            <de>Benachrichtigungen für Steuerabzüge und Rückzahlungen anzeigen</de>
+            <fr>Afficher les notifications pour les déductions et remboursements d'impôts</fr>
+            <es>Mostrar notificaciones para deducciones y devoluciones de impuestos</es>
+        </text>
+        
+        <text name="tax_mod_show_statistics">
+            <en>Show Statistics</en>
+            <nl>Toon statistieken</nl>
+            <de>Statistiken anzeigen</de>
+            <fr>Afficher les statistiques</fr>
+            <es>Mostrar estadísticas</es>
+        </text>
+        
+        <text name="tax_mod_info_notify1">
+            <en>Daily taxes are deducted from your farm balance.</en>
+            <nl>Dagelijkse belastingen worden afgetrokken van uw farm saldo.</nl>
+            <de>Tägliche Steuern werden von Ihrem Farm-Guthaben abgezogen.</de>
+            <fr>Les impôts quotidiens sont déduits de votre solde agricole.</fr>
+            <es>Los impuestos diarios se deducen de su saldo agrícola.</es>
+        </text>
+
+        <text name="tax_mod_info_notify2">
+            <en>At the end of each month you receive a tax return.</en>
+            <nl>At het einde van elke maand ontvang je een belastingteruggave.</nl>
+            <de>Am Ende jedes Monats erhältst du eine Steuerrückerstattung.</de>
+            <fr>À la fin de chaque mois, vous recevez un remboursement d'impôts.</fr>
+            <es>Al final de cada mes recibes una devolución fiscal.</es>
+        </text>
+
+        <text name="tax_mod_info_notify3">
+            <en>You can configure everything via the console.</en>
+            <nl>Je kunt alles configureren via het console.</nl>
+            <de>Alles konfigurieren über die Konsole.</de>
+            <fr>Vous pouvez tout configurer via la console.</fr>
+            <es>Puedes configurar todo a través de la consola.</es>
+        </text>
+
+        <text name="tax_mod_info_notify4">
+            <en>Type 'tax' in the console for all commands.</en>
+            <nl>Typ 'tax' in het console voor alle commando's.</nl>
+            <de>Gib 'tax' in der Konsole für alle Befehle ein.</de>
+            <fr>Tapez 'tax' dans la console pour toutes les commandes.</fr>
+            <es>Escribe 'tax' en la consola para todos los comandos.</es>
+        </text>
+
+        <text name="tax_mod_show_statistics_tooltip">
+            <en>Show tax statistics in console commands</en>
+            <nl>Toon belastingstatistieken in console-commando's</nl>
+            <de>Steuerstatistiken in Konsolenbefehlen anzeigen</de>
+            <fr>Afficher les statistiques fiscales dans les commandes console</fr>
+            <es>Mostrar estadísticas fiscales en comandos de consola</es>
+        </text>
+        
+        <text name="tax_mod_debug">
+            <en>Debug Mode</en>
+            <nl>Debug-modus</nl>
+            <de>Debug-Modus</de>
+            <fr>Mode debug</fr>
+            <es>Modo depuración</es>
+        </text>
+
+
+        <text name="tax_mod_info_notification_title">
+            <en>Tax Information</en>
+            <nl>Belastinginformatie</nl>
+            <de>Steuerinformationen</de>
+            <fr>Informations fiscales</fr>
+            <es>Información fiscal</es>
+        </text>
+
+        <text name="tax_mod_debug_tooltip">
+            <en>Enable debug logging in console</en>
+            <nl>Schakel debug-logging in de console in</nl>
+            <de>Debug-Protokollierung in der Konsole aktivieren</de>
+            <fr>Activer la journalisation de débogage dans la console</fr>
+            <es>Activar registro de depuración en la consola</es>
+        </text>
+        
+        <text name="tax_mod_welcome_popup">
+            <en>Show Welcome Popup</en>
+            <nl>Toon welkomstpop-up</nl>
+            <de>Willkommens-Popup anzeigen</de>
+            <fr>Afficher la pop-up de bienvenue</fr>
+            <es>Mostrar ventana emergente de bienvenida</es>
+        </text>
+
+        <text name="tax_mod_welcome_popup_tooltip">
+            <en>Show welcome popup when mod is loaded</en>
+            <nl>Toon welkomstpop-up wanneer mod wordt geladen</nl>
+            <de>Willkommens-Popup anzeigen, wenn Mod geladen wird</de>
+            <fr>Afficher la pop-up de bienvenue lorsque le mod est chargé</fr>
+            <es>Mostrar ventana emergente de bienvenida cuando se carga el mod</es>
+        </text>
+
+        <!-- Console commands -->
+        <text name="tax_mod_console_help">
+            <en><![CDATA[
+====== Tax Mod Commands ======
+ - tax status -> Show current settings and statistics
+ - tax enable -> Enable tax system
+ - tax disable -> Disable tax system
+ - tax rate [low|medium|high] -> Set tax rate level
+ - tax return [percentage] -> Set return percentage (0-100)
+ - tax minimum [amount] -> Set minimum balance (e.g., 1000)
+ - tax statistics -> Show detailed tax statistics
+ - tax simulate -> Simulate next tax/return cycle
+ - tax debug -> Toggle debug mode
+ - tax reload -> Reload settings from file
+================================
+            ]]></en>
+            <de><![CDATA[
+====== Steuern-Mod Befehle ======
+ - tax status -> Aktuelle Einstellungen und Statistiken anzeigen
+ - tax enable -> Steuersystem aktivieren
+ - tax disable -> Steuersystem deaktivieren
+ - tax rate [low|medium|high] -> Steuersatzstufe setzen
+ - tax return [percentage] -> Rückzahlungsprozentsatz setzen (0-100)
+ - tax minimum [amount] -> Mindestguthaben setzen (z.B. 1000)
+ - tax statistics -> Detaillierte Steuerstatistiken anzeigen
+ - tax simulate -> Nächsten Steuer-/Rückzahlungszyklus simulieren
+ - tax debug -> Debug-Modus umschalten
+ - tax reload -> Einstellungen aus Datei neu laden
+================================
+            ]]></de>
+        </text>
+        
+        <!-- Statistics -->
+        <text name="tax_mod_stats_total_taxes">
+            <en>Total taxes paid: %s</en>
+            <nl>Totaal betaalde belastingen: %s</nl>
+            <de>Insgesamt gezahlte Steuern: %s</de>
+            <fr>Total des taxes payées : %s</fr>
+            <es>Total de impuestos pagados: %s</es>
+        </text>
+        
+        <text name="tax_mod_stats_total_returns">
+            <en>Total tax returns: %s</en>
+            <nl>Totaal belastingteruggaves: %s</nl>
+            <de>Insgesamt Steuerrückzahlungen: %s</de>
+            <fr>Total des remboursements d'impôts : %s</fr>
+            <es>Total de devoluciones de impuestos: %s</es>
+        </text>
+        
+        <text name="tax_mod_stats_month_taxes">
+            <en>Taxes this month: %s</en>
+            <nl>Belastingen deze maand: %s</nl>
+            <de>Steuern diesen Monat: %s</de>
+            <fr>Taxes ce mois : %s</fr>
+            <es>Impuestos este mes: %s</es>
+        </text>
+        
+        <!-- Standard texts -->
+        <text name="option_ON">
+            <en>ON</en>
+            <nl>AAN</nl>
+            <de>EIN</de>
+            <fr>ACTIVÉ</fr>
+            <es>ACTIVADO</es>
+        </text>
+        
+        <text name="option_OFF">
+            <en>OFF</en>
+            <nl>UIT</nl>
+            <de>AUS</de>
+            <fr>DÉSACTIVÉ</fr>
+            <es>DESACTIVADO</es>
+        </text>
+    </l10n>
+    
+    <extraSourceFiles>
+        <sourceFile filename="main.lua"/>
+    </extraSourceFiles>
+</modDesc>
