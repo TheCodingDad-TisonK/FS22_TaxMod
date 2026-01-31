@@ -1,5 +1,5 @@
 -- =========================================================
--- FS22 Tax Mod (version 1.1.0.2)
+-- FS22 Tax Mod (version 1.1.0.3)
 -- =========================================================
 -- Daily tax deductions with monthly returns
 -- =========================================================
@@ -17,7 +17,7 @@ TaxMod = {}
 TaxMod.modName = "FS22_TaxMod"
 TaxMod.settings = {}
 TaxMod.hasRegisteredSettings = false
-TaxMod.version = "1.1.0.2"
+TaxMod.version = "1.1.0.3"
 
 -- =====================
 -- DEFAULT CONFIGURATION
@@ -244,7 +244,6 @@ end
 
 function TaxMod:applyDailyTax()
     if not self.settings.enabled then return end
-    if not self:isServer() then return end  -- <-- ADDED
 
     local farmId = g_currentMission.player.farmId
     if farmId == nil then return end
@@ -313,7 +312,6 @@ end
 
 function TaxMod:applyMonthlyReturn()
     if not self.settings.enabled then return end
-    if not self:isServer() then return end  -- <-- ADDED
 
     local farmId = g_currentMission.player.farmId
     if farmId == nil then return end
@@ -353,6 +351,7 @@ function TaxMod:applyMonthlyReturn()
     self:saveSettingsToXML()
 end
 
+
 -- =====================
 -- NOTIFICATIONS
 -- =====================
@@ -363,12 +362,12 @@ function TaxMod:showNotification(notificationType, amount, monthlyTaxes)
     local message = ""
     
     if notificationType == "tax" then
-        title = g_i18n:getText("tax_mod_tax_notification_title") or "Tax"
-        message = string.format(g_i18n:getText("tax_mod_daily_tax_message") or "Daily tax deducted: %s", 
+        title = g_i18n:getText("tax_mod_tax_notification_title")
+        message = string.format(g_i18n:getText("tax_mod_daily_tax_message"), 
                               self:formatMoney(amount))
     elseif notificationType == "return" then
-        title = g_i18n:getText("tax_mod_return_notification_title") or "Tax Return"
-        message = string.format(g_i18n:getText("tax_mod_monthly_return_message") or "Monthly tax return: %s (Taxes paid this month: %s)", 
+        title = g_i18n:getText("tax_mod_return_notification_title")
+        message = string.format(g_i18n:getText("tax_mod_monthly_return_message"), 
                               self:formatMoney(amount), 
                               self:formatMoney(monthlyTaxes or 0))
     end
@@ -415,20 +414,6 @@ function TaxMod:onConsoleCommand(...)
         self:saveSettingsToXML()
         print("Tax system disabled")
         
-    elseif action == "simulate" then
-        if g_currentMission and g_currentMission.environment then
-            self:applyDailyTax()
-
-            local env = g_currentMission.environment
-            if env.currentDay == 1 then
-                self:applyMonthlyReturn()
-            end
-
-            print("Simulation complete")
-        else
-            print("Cannot simulate - game not loaded")
-        end
-
     elseif action == "rate" and args[2] then
         local rate = args[2]:lower()
         if rate == "low" or rate == "medium" or rate == "high" then
