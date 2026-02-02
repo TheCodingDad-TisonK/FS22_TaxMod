@@ -1,4 +1,7 @@
 # FS22 Tax Mod
+![Downloads](https://img.shields.io/github/downloads/TheCodingDad-TisonK/FS22_TaxMod/total?style=for-the-badge)
+![Release](https://img.shields.io/github/v/release/TheCodingDad-TisonK/FS22_TaxMod?style=for-the-badge)
+![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red?style=for-the-badge)
 
 Daily tax deductions with monthly returns for Farming Simulator 22.
 
